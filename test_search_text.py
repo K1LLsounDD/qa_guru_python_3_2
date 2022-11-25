@@ -10,8 +10,8 @@ def test_search_positive(set_browser_settings):
     browser.element('[id=search]').should(have.text(search_results))
 
 def test_search_negative(set_browser_settings):
-    input_text = 'Qa one love'
-    search_results = 'Birds'
+    input_text = 'asdgdasgfdhdfghfg'
+    search_results = 'По запросу asdgdasgfdhdfghfg ничего не найдено. '
 
     browser.element('[name=q]').should(be.blank).type(input_text).press_enter()
-    browser.element('[id=search]').should(have.text(search_results))
+    browser.element('[id="topstuff"').should(have.text(search_results))
